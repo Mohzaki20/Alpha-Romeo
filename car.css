@@ -1,0 +1,453 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+.alpha {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  background-color: #ed686b;
+  height: 600px;
+  width: 800px;
+  position: relative;
+  border-radius: 5px;
+}
+/* start Rings */
+.alpha .container .rings {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: #ff7578;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.alpha .container .rings::before {
+  content: "";
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #fe8282;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.alpha .container .rings::after {
+  content: "";
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  background-color: #ff999a;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* End Rings */
+/* Start Car Face */
+.container .face {
+  height: 150px;
+  width: 350px;
+  border-radius: 150px;
+  background-color: #ed3f41;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+  border: 5px solid #2c100f;
+  box-shadow: #831f1f 0 -4px 0 0 inset, #fff 4px 0 0 0 inset;
+  overflow: hidden;
+}
+.container .face-mirror {
+  position: absolute;
+  top: 43.5%;
+  left: 65%;
+  height: 22px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid black;
+}
+.container .wire {
+  clip-path: polygon(68% 0%, 49% 100%, 52% 100%);
+  background-color: white;
+  width: 121px;
+  height: 160px;
+  position: absolute;
+  top: 114px;
+  left: 27%;
+}
+.container .wire2 {
+  height: 7px;
+  width: 6px;
+  background-color: white;
+  position: absolute;
+  left: 274px;
+  top: 269px;
+  z-index: 2;
+  border-radius: 1px;
+  transform: rotate(5deg);
+}
+.container .face .capot {
+  width: 67%;
+  height: 44%;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -20%);
+  border-radius: 0 0 45px 45px;
+  box-shadow: black 3px 5px 0 inset, black -3px 5px 0px inset,
+    white 0px -2px 0 inset;
+}
+
+.container .face .line {
+  height: 12px;
+  width: calc(100% - 20px);
+  background-color: #c52c2d;
+  position: absolute;
+  top: 86px;
+  left: 11px;
+  z-index: -1;
+}
+.container .face .circle {
+  height: 0;
+  width: 0;
+  border-width: 45px;
+  border-color: #c52c2d #c52c2d transparent transparent;
+  border-style: solid;
+  border-radius: 50%;
+  position: absolute;
+  right: -12px;
+  top: 25px;
+  transform: rotate(85deg);
+}
+.container .face .circle::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-width: 38px;
+  border-color: #c52c2d #c52c2d transparent transparent;
+  border-style: solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 225px;
+  transform: rotate(117deg);
+  right: -20px;
+}
+.container .face .line::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-width: 100px 100px 100px 100px;
+  border-color: #ccc;
+  position: absolute;
+}
+.container .face .eyes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .face .eyes div {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 15px;
+  margin: 15px;
+  box-shadow: #ccc 0 6px 0 0 inset, #682023 0 1px 1px 1px;
+  border: 4px solid #2c100f;
+}
+.container .face .eyes div::before {
+  content: "";
+  width: 45px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 5px solid #2c100f;
+  position: absolute;
+  top: -8px;
+  left: -9px;
+}
+.container .face .side {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 16px;
+}
+.container .face .side .one,
+.container .face .side .two {
+  width: 125px;
+  height: 40px;
+  background-color: #e6e6e6;
+  border-radius: 10px 110px 10px 150px;
+  border: 3px solid #2c100f;
+  box-shadow: #ccc 0 -6px 0 0 inset;
+  position: relative;
+  top: 17px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  -webkit-border-radius: 10px 110px 10px 150px;
+  -moz-border-radius: 10px 110px 10px 150px;
+  -ms-border-radius: 10px 110px 10px 150px;
+  -o-border-radius: 10px 110px 10px 150px;
+}
+.container .face .side .two {
+  transform: rotateY(-180deg);
+}
+.container .face .side .one .small {
+  height: 16px;
+  width: 110px;
+  background-color: #363231;
+  border-radius: 10px 90px 10px 150px;
+  box-shadow: #232021 0 4px 0 0 inset;
+  border: 3px solid #221e1e;
+  position: absolute;
+}
+.container .face .side .small::before {
+  content: "";
+  height: 8px;
+  width: 40px;
+  background-color: #ee8d3f;
+  border-radius: 10px 90px 10px 150px;
+  box-shadow: #b66d30 0 3px 0 0 inset;
+  border: 2px solid #221e1e;
+  position: absolute;
+  left: 0;
+}
+.container .face .side .two .small2 {
+  height: 16px;
+  width: 110px;
+  background-color: #363231;
+  border-radius: 10px 90px 10px 150px;
+  box-shadow: #232021 0 4px 0 0 inset;
+  border: 3px solid #221e1e;
+  position: relative;
+}
+
+.container .face .side .small2::before {
+  content: "";
+  height: 8px;
+  width: 40px;
+  background-color: #ee8d3f;
+  border-radius: 10px 90px 10px 150px;
+  box-shadow: #b66d30 0 3px 0 0 inset;
+  border: 2px solid #221e1e;
+  position: absolute;
+  left: 0;
+}
+.container .face .side .logo {
+  height: 47px;
+  width: 36px;
+  background-color: #363231;
+  position: relative;
+  top: 16px;
+  border: 3.5px solid #e3e4e5;
+  border-radius: 20px 20px 40px 40px;
+  box-shadow: #831f1f 2px 2px 0 0, #831f1f -2px 2px 0 0;
+}
+.container .face .side .logo::before {
+  content: "";
+  height: 10px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #e3e4e5;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #363231;
+}
+.container .face .side .logo::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #e3e4e5;
+  position: absolute;
+  top: -7.5px;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: -1;
+  border-radius: 50%;
+}
+.container .face .side .logo ul {
+  list-style: none;
+  position: relative;
+  top: 8px;
+}
+
+.container .face .side .logo ul li {
+  height: 2px;
+  width: 100%;
+  background-color: #e3e4e5;
+  margin-top: 4.5px;
+}
+/* End Car Face */
+/* Start glass */
+.container .glass {
+  background-color: transparent;
+  height: 85px;
+  width: 145px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 43%;
+  transform: translate(-31%, -72%) skew(18deg);
+  border-radius: 5px;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  box-shadow: black -5px 5px 0px inset, black 5px -5px 0;
+}
+.container .glass::before {
+  content: "";
+  background-color: transparent;
+  height: 85px;
+  width: 145px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 43%;
+  transform: translate(-90%, -43%) skew(-33deg);
+  border-radius: 5px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  box-shadow: black 5px 5px 0px inset, black -5px -5px 0;
+  overflow: hidden;
+}
+.container .glass div {
+  height: 100%;
+  width: 50px;
+  background-color: white;
+  opacity: 0.3;
+  transform: skew(-33deg, 10deg);
+  position: absolute;
+  left: -50px;
+  overflow:hidden;
+}
+
+.container .mirror {
+  width: 31px;
+  height: 11px;
+  background-color: black;
+  border-radius: 2px;
+  position: relative;
+  left: 50%;
+  top: -31%;
+  transform: translate(-50%, -50%);
+}
+.container .mirror::after {
+  content: "";
+  width: 4px;
+  height: 15px;
+  background-color: black;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .seats {
+  position: absolute;
+  left: 47%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.container .seats div {
+  height: 20px;
+  width: 70px;
+  background-color: black;
+  margin-left: 45px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+.container .seats div:last-child::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 4px solid black;
+  background-color: transparent;
+  position: absolute;
+  top: -15px;
+  left: 5px;
+}
+/* End glass */
+/* start wheels */
+.container .wheels {
+  position: absolute;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  width: 545px;
+  z-index: 1;
+}
+.container .wheels div {
+  width: 50px;
+  height: 80px;
+  background-color: #363231;
+  border: 5px solid black;
+  border-radius: 15px;
+  box-shadow: #4d4747 0px -8px 0 0 inset;
+}
+.container .wheels .right-wheel {
+  position: relative;
+}
+.container .wheels .right-wheel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 63%;
+  background-color: #252324;
+  border-radius: 0 0 0 40px;
+}
+.container .wheels .left-wheel {
+  position: relative;
+}
+.container .wheels .left-wheel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 63%;
+  background-color: #252324;
+  border-radius: 0 0 40px 0;
+}
+.container .bottom-side {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: 15px;
+  background-color: black;
+  border-radius: 0 0 8px 8px;
+}
+/* End wheels */
+/* start shadow */
+.container .shadow {
+  width: 365px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+/* end shadow */
